@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../utils/AuthContext";
 import { useMsg } from "../utils/MsgContext";
 import { ID } from "appwrite";
-import { Trash2 } from 'react-feather';
 
 function Home(){
     const [messageBody,setMessageBody] = useState("")
@@ -67,7 +66,7 @@ function Home(){
                                                         className=" text-gray-400 pb-2"
                                                         onClick={() => handleDeleteMsg(item.$id)}
                                                     >
-                                                        <Trash2/>
+                                                        X
                                                     </button>}
                                                     <div className={` overflow-hidden max-w-96 mb-2 px-4 py-2 rounded-3xl ${user?.$id !== item.user_id ? "border-2 border-yellow-500":"bg-yellow-500"}`}>
                                                         <p className=" max-w-96 font-bold text-white">{item.message}</p>
